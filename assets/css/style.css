@@ -2,7 +2,7 @@
 body {
 	margin: 0;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 15px;
+	font-size: 14px;
 	line-height: 1.6;
 	color: #86878b;
 }
@@ -130,6 +130,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .subtitle {
 	margin-bottom: 45px;
+	font-size: 15px;
 	font-weight: 300;
 	color: #fff;
 }
@@ -138,6 +139,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 15px 35px;
 	border: 2px solid #fff;
 	text-decoration: none;
+	font-size: 15px;
 	font-weight: 700;
 	color: #fff;
 	transition: background-color .2s linear, 
@@ -173,6 +175,7 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: #f5f5f5;
 	font-weight: 700;
 	font-size: 18px;
+	color: #000;
 }
 
 .sign-up__title-text {
@@ -216,5 +219,61 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sign-up__button:active {
-	background-color: #ff9b51;
+	background-color: #f5770a;
 }
+
+
+/* Social */
+
+.social__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.social__description {
+    width: 100%;
+    max-width: 320px;
+
+}
+
+.social__title {
+	margin-top: 25px;
+	font-size: 20px;
+	font-weight: 700;
+	color: #000;
+}
+
+.social__subtitle {
+	font-weight: 300;
+	color: #9a9a9a;
+}
+
+.social__items {
+	display: flex;
+	justify-content: space-between;
+}
+
+.social__link {
+	text-decoration: none;
+	color: #cccccc;
+	transition: color .2s linear;
+}
+
+.social__link:hover {
+    color: #86878b;
+}
+
+.social__link:active {
+    color: #cccccc;
+}
+
+.social__item {
+	margin-left: 63px;
+	font-size: 40px;
+}
+
+.social__item:first-child {
+	margin-left: 0;
+}
+
