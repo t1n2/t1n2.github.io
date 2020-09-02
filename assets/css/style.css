@@ -140,7 +140,6 @@ h1, h2, h3, h4, h5, h6 {
 	border: 2px solid #fff;
 	text-decoration: none;
 	font-size: 15px;
-	font-weight: 700;
 	color: #fff;
 	transition: background-color .2s linear, 
 	color .2s linear;
@@ -293,10 +292,19 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Tabs */
 
-.tabs {
-	padding-top: 145px;
+.section {
+	padding-top: 110px;
 	padding-bottom: 115px;
-	background-color: #f5f5f5;
+}
+
+.section--gray {
+    background-color: #f5f5f5;
+}
+
+.section--darkgray {
+    background-color: #9a9a9a;
+    padding: 75px 0;
+
 }
 
 .tabs__inner {
@@ -382,8 +390,6 @@ h1, h2, h3, h4, h5, h6 {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding-top: 108px;
-	padding-bottom: 137px;
 }
 
 .sublist__picture {
@@ -486,15 +492,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Features */
 
-.section__header {
-   padding-top: 108px;
-}
-
 .section__title {
 	font-family: 'Raleway', sans-serif;
 	text-align: center;
 	text-transform: uppercase;
-	font-size: 30px;
+	font-size: 35px;
 	color: #333;
 }
 
@@ -515,7 +517,6 @@ h1, h2, h3, h4, h5, h6 {
 .features__inner {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 105px;
 }
 
 .features__item {
@@ -546,15 +547,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Price */
 
-.price {
-	background-color: #f5f5f5;
-}
-
 .price__inner {
 	display: flex;
 	justify-content: space-around;
 	align-items: flex-end;
-	padding-bottom: 95px;
 }
 
 .price__item {
@@ -621,7 +617,6 @@ h1, h2, h3, h4, h5, h6 {
 .reviews__inner {
 	display: flex;
 	justify-content: space-between;
-	padding-bottom: 95px;
 }
 
 .reviews__item {
@@ -679,8 +674,11 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: #9a9a9a;
 }
 
-.section__header.section__header--design{
-	padding-top: 75px;
+.design__inner {
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-size: 15px;
+	font-weight: 300;
 }
 
 .section__header--design .section__title {
@@ -693,25 +691,125 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section__header--design .section_subtitle {
-	margin-bottom: 50px;
 	color: #c2c2c2;
 }
 
-.design__inner {
-	padding-bottom: 78px;
-	text-align: center;
-	font-family: 'Raleway', sans-serif;
-	font-size: 15px;
-	font-weight: 300;
+
+/* Contact */
+
+
+.contact__form {
+	display: flex;
+	justify-content: space-between;
+    margin-bottom: 55px;
+    
 }
 
-.button {
+.contact__inner {
+	position: relative;
+	text-align: center;
+}
+
+.left__col {
+	margin-right: 65px;
+}
+
+.contact__input {
+	padding: 0;
+	padding-top: 40px;
+	padding-bottom: 10px;
+	width: 100%;
+	max-width: 530px;
+	border: 0;
+	border-bottom: 1px solid #bdbdbd;
+}
+
+.contact__message {
+	padding: 0;
+	padding-top: 36px;
+	resize: none;
+	width: 100%;
+	max-width: 530px;
+	height: auto;
+	font-family: 'Open Sans', sans-serif;
+	border: 0;
+	border-bottom: 1px solid #bdbdbd;
+}
+
+.contact__input::placeholder,
+.contact__message::placeholder {
+    color: #dedede;
+}
+
+.contact__input:focus,
+.contact__message:focus {
+	outline: 0;
+	border-color: #000;
+}
+
+.contact__button {
 	padding: 15px 35px;
-	border: 2px solid #fff;
+	position: absolute;
+	left: 50%;
+	bottom: -50%;
+	transform: translateX(-50%);
+	border: 0;
+	border-radius: 5px;
+    background-color: #ff8b38;
+    box-shadow: 0 3px 3px -3px #787878;
 	text-decoration: none;
 	font-size: 15px;
-	font-weight: 700;
 	color: #fff;
 	transition: background-color .2s linear, 
 	color .2s linear;
+
+}
+
+.contact__button:hover {
+	color: #fff;
+	background-color: #f5770a;
+}
+
+.contact__button:active {
+	background-color: #bd5e0b;
+}
+
+.contact__button:focus {
+    outline: 0;
+	border-color: #000;
+}
+
+
+/* Footer */
+
+.footer {
+	padding: 20px 0;
+	background-color: #000;
+}
+
+.footer__social {
+	display: flex;
+	justify-content: center;
+}
+
+.footer__social-item {
+    margin-right: 32px;
+    font-size: 20px;
+}
+
+.footer__social-item:last-child {
+    margin-right: 0;
+}
+
+.footer__social-item:hover {
+    color: #86878b;
+}
+
+.footer__social-item:active {
+    color: #cccccc;
+}
+
+.copyrights {
+	text-align: center;
+	font-size: 13px;
 }
