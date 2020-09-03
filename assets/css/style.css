@@ -160,7 +160,7 @@ h1, h2, h3, h4, h5, h6 {
 	width: 100%;
 	max-width: 360px;
 	position: absolute;
-	top: 140px;
+	top: 60px;
 	right: 0;
 	background-color: #fff;
 	box-shadow: 0px 0px 10px #787878;
@@ -289,7 +289,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* Tabs */
+/* Section */
 
 .section {
 	padding-top: 110px;
@@ -306,7 +306,14 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+
+/* Tabs */
+
 .tabs {
+	padding: 110px 0;
+}
+
+.tabs__inner {
 	position: relative;
 	display: flex;
 }
@@ -511,6 +518,7 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 35px;
+	font-weight: 400;
 	color: #333;
 }
 
@@ -525,6 +533,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .section_subtitle {
     text-align: center;
+    font-weight: 400;
 }
 
 .features {
@@ -874,13 +883,20 @@ h1, h2, h3, h4, h5, h6 {
     }
 
 
-    /* Tabs */
+    /* Section */
 
     .section {
     	padding: 50px 0;
     }
 
-    .tabs {
+
+    /* Tabs */
+
+	.tabs {
+		padding: 50px 0;
+	}
+
+    .tabs__inner {
     	justify-content: center;
     	align-items: center;
     }
