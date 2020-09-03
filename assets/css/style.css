@@ -98,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
 .intro {
 	position: relative;
 	background-color: #9a9a9a;
-
+	padding: 110px 0 140px 0;
 }
 
 .intro__inner {
@@ -108,7 +108,6 @@ h1, h2, h3, h4, h5, h6 {
 .intro__promo {
 	width: 100%;
 	max-width: 440px;
-	padding: 110px 0 140px 0;
 	font-family: 'Raleway', sans-serif;
 }
 
@@ -378,6 +377,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .slider__img {
 	position: absolute;
+	width: 100%;
+	max-width: 320px;
+	height: auto;
 	top: 50%;
 	right: 0;
 	transform: translateY(-50%);
@@ -390,10 +392,14 @@ h1, h2, h3, h4, h5, h6 {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 .sublist__picture {
 	margin-left: 10px;
+	width: 100%;
+	max-width: 450px;
+	height: auto;
 	box-shadow: 5px 10px 20px #787878;
 }
 
@@ -420,7 +426,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sublist__subtitle {
-	padding-bottom: 50px;
+	margin-bottom: 50px;
 }
 
 .sublist__item {
@@ -486,11 +492,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .picture__img {
+	display: block;
+	width: 100%;
+	max-width: 450px;
+	height: auto;
 	box-shadow: 5px 10px 20px #787878;
 }
 
 
 /* Features */
+
+.section__header {
+	margin-bottom: 80px;
+}
 
 .section__title {
 	font-family: 'Raleway', sans-serif;
@@ -510,7 +524,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section_subtitle {
-	margin-bottom: 80px;
     text-align: center;
 }
 
@@ -762,7 +775,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: #fff;
 	transition: background-color .2s linear, 
 	color .2s linear;
-
+	cursor: pointer;
 }
 
 .contact__button:hover {
@@ -812,4 +825,219 @@ h1, h2, h3, h4, h5, h6 {
 .copyrights {
 	text-align: center;
 	font-size: 13px;
+}
+
+
+
+
+@media (max-width: 990px) {
+
+
+	/* Intro */
+
+    .intro {
+    	padding: 50px 0;
+    }
+
+	.intro__promo {
+		padding: 0;
+		margin: 0 auto;
+		text-align: center;
+	}
+	
+    .title:after {
+    	margin: 40px auto;
+    }
+
+    .sign-up {
+    	position: static;
+        margin: 40px auto 0;
+    }
+
+
+    /* Social */
+
+    .social__inner {
+    	display: block;
+    }
+
+    .social__description {
+    	margin: 0 auto;
+    	text-align: center;
+    }
+
+    .social__item {
+    	margin-top: 10px;
+    }
+
+    .social__item {
+    	margin-left: 20px;
+    }
+
+
+    /* Tabs */
+
+    .section {
+    	padding: 50px 0;
+    }
+
+    .tabs__inner {
+    	justify-content: center;
+    	align-items: center;
+    }
+
+    .slider__img {
+    	position: static;
+    	transform: translateY(0);
+    }
+
+
+    /* Sublist */
+
+	.sublist__inner {
+		justify-content: center;
+	}
+
+	.sublist__picture {
+		margin: 0 auto 20px;
+	}
+
+	.sublist__header {
+		text-align: center;
+	}
+
+	.sublist__header:after {
+		margin: 30px auto;
+	}
+
+
+	/* Picture */
+
+	.picture__inner {
+		display: block;
+		padding: 50px 0;
+	}
+
+	.picture__description {
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.picture__title:after {
+		margin: 15px auto;
+	}
+
+	.picture__img {
+		display: block;
+		margin: 0 auto;
+	}
+
+
+}
+
+
+@media (max-width: 750px) {
+
+
+	/* Nav */
+
+    .nav__link {
+    	padding-right: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+
+
+	/* Nav */
+
+    .nav {
+    	display: none;
+    }
+
+
+    /* Intro */
+
+    .intro {
+    	padding: 25px 0;
+    }
+
+    .sign-up__input {
+
+    }
+
+
+    /* Social */
+
+    .social__item {
+    	font-size: 25px;
+    }
+
+
+    /* Tabs */
+
+    .slider {
+    	margin-right: 50px;
+    }
+
+    .slider__content__title {
+    	margin-bottom: 20px;
+    }
+
+
+    /* Sublist */
+
+	.sublist__header:after {
+		margin: 15px auto;
+	}
+
+	.sublist__item {
+		margin-bottom: 20px;
+	}
+
+	.sublist__subtitle {
+		margin-bottom: 20px;
+	}
+
+
+	/* Features */
+
+	.section__header {
+		margin-bottom: 40px;
+	}
+
+	.features__inner {
+		display: block;
+	}
+
+	.features__item {
+		margin: 0 auto;
+	}
+
+	.features__img {
+		margin-bottom: 15px;
+	}
+
+	.features__title {
+		margin-bottom: 15px;
+	}
+
+@media (max-width: 400px) {
+
+
+    /* Intro */
+
+    .sign-up__input {
+    	margin: 0;
+    	margin-top: 20px;
+    }
+
+
+    /* Tabs */
+
+    .slider__item {
+    	padding: 30px 24px;
+    }
+
+
 }
