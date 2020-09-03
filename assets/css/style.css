@@ -306,7 +306,7 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-.tabs__inner {
+.tabs {
 	position: relative;
 	display: flex;
 }
@@ -388,7 +388,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Sublist */
 
-.sublist__inner {
+.sublist {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -527,7 +527,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-.features__inner {
+.features {
     display: flex;
     justify-content: space-between;
 }
@@ -560,13 +560,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Price */
 
-.price__inner {
+.price {
 	display: flex;
 	justify-content: space-around;
 	align-items: flex-end;
+	flex-wrap: wrap;
 }
 
 .price__item {
+	margin-bottom: 10px;
 	width: 100%;
 	max-width: 345px;
 	text-align: center;
@@ -627,13 +629,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Reviews */
 
-.reviews__inner {
+.reviews {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .reviews__item {
 	position: relative;
+	margin-bottom: 20px;
 	width: 100%;
 	max-width: 275px;
 }
@@ -684,10 +688,6 @@ h1, h2, h3, h4, h5, h6 {
 /* Design */
 
 .design {
-	background-color: #9a9a9a;
-}
-
-.design__inner {
 	text-align: center;
 	font-family: 'Raleway', sans-serif;
 	font-size: 15px;
@@ -710,17 +710,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Contact */
 
+.contact {
+	position: relative;
+	text-align: center;
+}
 
 .contact__form {
 	display: flex;
 	justify-content: space-between;
     margin-bottom: 55px;
     
-}
-
-.contact__inner {
-	position: relative;
-	text-align: center;
 }
 
 .left__col {
@@ -881,7 +880,7 @@ h1, h2, h3, h4, h5, h6 {
     	padding: 50px 0;
     }
 
-    .tabs__inner {
+    .tabs {
     	justify-content: center;
     	align-items: center;
     }
@@ -894,7 +893,7 @@ h1, h2, h3, h4, h5, h6 {
 
     /* Sublist */
 
-	.sublist__inner {
+	.sublist {
 		justify-content: center;
 	}
 
@@ -930,6 +929,25 @@ h1, h2, h3, h4, h5, h6 {
 	.picture__img {
 		display: block;
 		margin: 0 auto;
+	}
+
+
+	/* Price */
+
+	.price__number {
+		font-size: 70px;
+	}
+
+	/* Reviews */
+
+	.reviews {
+		justify-content: space-around;
+	}
+
+	/* Contact */
+
+	.contact__form {
+		margin-bottom: 75px;
 	}
 
 
@@ -976,6 +994,14 @@ h1, h2, h3, h4, h5, h6 {
 
     /* Tabs */
 
+    .section__title {
+    	font-size: 25px;
+    }
+
+    .section__title:after {
+    	margin: 20px auto;
+    }
+
     .slider {
     	margin-right: 50px;
     }
@@ -1006,7 +1032,7 @@ h1, h2, h3, h4, h5, h6 {
 		margin-bottom: 40px;
 	}
 
-	.features__inner {
+	.features {
 		display: block;
 	}
 
@@ -1039,5 +1065,10 @@ h1, h2, h3, h4, h5, h6 {
     	padding: 30px 24px;
     }
 
+    /* Footer */
+
+    .footer__social-item {
+    	margin-right: 20px;
+    }
 
 }
