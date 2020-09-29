@@ -334,6 +334,32 @@ h1, h2, h3, h4, h5, h6 {
 	transition: background-color .2s linear;
 }
 
+.slider__show {
+	display: block;
+}
+
+.slider__hide {
+	display: none;
+}
+
+.slider__fade {
+	animation-name: slider__fade;
+	animation-duration: 2s;
+}
+
+@keyframes slider__fade {
+	from {
+		opacity:0.1;
+	}
+	to {
+		opacity:1;
+	}
+}
+
+.slider__item-active {
+	background-color: #f5770a;
+}
+
 .slider__item:hover {
     background-color: #ff8b38;
 }
