@@ -63,11 +63,11 @@
 		                </a>
 	                </div>
 
-                    <form class="sign-up" action="/" method="post">
+                    <form class="sign-up" action="#">
                     	<p class="sign-up__title">Try Your <span class="sign-up__title-text">FREE</span> Trial Today</p>
-                    	<input class="sign-up__input" type="text" name="name" placeholder="Name">
-                    	<input class="sign-up__input" type="email" name="email" placeholder="Email">
-                    	<input class="sign-up__input" type="password" name="password" placeholder="Password">
+                    	<input required class="sign-up__input" type="text" name="name" placeholder="Name">
+                    	<input required class="sign-up__input" type="email" name="email" placeholder="Email">
+                    	<input required class="sign-up__input" type="password" name="password" placeholder="Password">
                     	<button class="sign-up__button" type="submit">
                     		Get Started
                     	</button>
@@ -465,9 +465,9 @@
                 <div class="contact">
                 	<form class="contact__form" action="/" method="post">
                 		<div class="left__col">
-                			<input class="contact__input" type="text" name="name" placeholder="Name">
-	                		<input class="contact__input" type="email" name="name" placeholder="Email">
-	                		<input class="contact__input" type="text" name="name" placeholder="Subject">
+                			<input required class="contact__input" type="text" name="name" placeholder="Name">
+	                		<input required class="contact__input" type="email" name="name" placeholder="Email">
+	                		<input required class="contact__input" type="text" name="name" placeholder="Subject">
                 		</div>	
                 		<div class="right__col">
                 			<textarea class="contact__message" rows="9" cols="80" placeholder="Message"></textarea>
