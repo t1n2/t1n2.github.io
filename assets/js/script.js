@@ -1,6 +1,9 @@
 'use sctric';
 
 window.addEventListener('DOMContentLoaded', () => {
+
+	// Tabs 
+
 	const tabs = document.querySelectorAll('.slider__item'),
 	      tabsContent = document.querySelectorAll('.slider__content'),
 		  tabsParent = document.querySelector('.slider');
@@ -37,4 +40,40 @@ window.addEventListener('DOMContentLoaded', () => {
 			});
 		};
 	});
+
+	// Form Sign-UP
+
+	const form = document.querySelector('.sign-up');
+
+	function postData(form) {
+		form.addEventListener('submit', (e) => {
+			e.preventDefault();
+
+			const request = new XMLHttpRequest();
+			request.open('POST', 'assets/server.php');
+
+			request.setRequestHeader('Content-type', 'application/json');
+			const formData = new FormData(form);
+
+			const object = {};
+			formData.forEach(function (value, key) {
+				object[key] = value;
+			});
+
+			const json = JSON.stringify(object);
+
+			request.send(json);
+
+			request.addEventListener('load', ()=> {
+				if (request.status === 200) {
+					console.log(request.response);
+					form.reset();
+				} else {
+					console.log('error');
+				}
+			});
+		});
+	}
+
+	postData(form);
 });
