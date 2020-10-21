@@ -28,6 +28,70 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+
+/* Modal */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+
+}
+
+.modal__content {
+	position: relative;
+	width: 100%;
+	max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 4px;
+    max-height: 80vh;
+	overflow-y: auto;
+	text-align: center;
+	font-weight: bold;
+	color: black;
+}
+
+.show {
+	display: block;
+}
+
+.hide {
+	display: none;
+}
+
+.fade {
+	animation-name: fade;
+	animation-duration: 2s;
+}
+
+@keyframes fade {
+	from {
+		opacity:0.1;
+	}
+	to {
+		opacity:1;
+	}
+}
+
+/* Status message */
+
+.message {
+	display: block;
+	padding: 10px;
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+	font-weight: bold;
+	font-style: italic;
+	color: rgb(57, 61, 65);
+}
+
 /* Header */
 .header {
 	background-color: #000;
@@ -332,28 +396,6 @@ h1, h2, h3, h4, h5, h6 {
 	border-bottom: 1px solid #b7b7b7;
 	cursor: pointer;
 	transition: background-color .2s linear;
-}
-
-.slider__show {
-	display: block;
-}
-
-.slider__hide {
-	display: none;
-}
-
-.slider__fade {
-	animation-name: slider__fade;
-	animation-duration: 2s;
-}
-
-@keyframes slider__fade {
-	from {
-		opacity:0.1;
-	}
-	to {
-		opacity:1;
-	}
 }
 
 .slider__item-active {

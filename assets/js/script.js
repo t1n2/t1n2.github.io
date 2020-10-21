@@ -10,8 +10,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	function hideTabContent() {
 		tabsContent.forEach(item => {
-			item.classList.add('slider__hide');
-			item.classList.remove('slider__show', 'slider__fade');
+			item.classList.add('hide');
+			item.classList.remove('show', 'fade');
 		});
 
 		tabs.forEach(item => {
@@ -20,8 +20,8 @@ window.addEventListener('DOMContentLoaded', () => {
 	};
 
 	function showTabContent (i = 0) {
-		tabsContent[i].classList.add('slider__show', 'slider__fade');
-		tabsContent[i].classList.remove('slider__hide');
+		tabsContent[i].classList.add('show', 'fade');
+		tabsContent[i].classList.remove('hide');
 		tabs[i].classList.add('slider__item-active');
 	}
 
@@ -45,9 +45,24 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	const form = document.querySelector('.sign-up');
 
+	const message = {
+		loading: 'assets/images/forms/spinner.svg',
+		success: 'Thanks! We will contact you soon',
+        failure: 'Something went wrong...'
+	};
+
 	function postData(form) {
 		form.addEventListener('submit', (e) => {
 			e.preventDefault();
+
+			const statusMessage = document.createElement('img');
+			statusMessage.src = message.loading;
+			statusMessage.style.cssText = `
+				display: block;
+				margin: 0 auto;
+			`;
+
+			form.insertAdjacentElement('afterbegin', statusMessage);
 
 			const request = new XMLHttpRequest();
 			request.open('POST', 'assets/server.php');
@@ -67,13 +82,31 @@ window.addEventListener('DOMContentLoaded', () => {
 			request.addEventListener('load', ()=> {
 				if (request.status === 200) {
 					console.log(request.response);
+					showThxModal(message.success);
 					form.reset();
+					statusMessage.remove();
 				} else {
-					console.log('error');
+					statusMessage.remove();
+					showThxModal(message.failure);
 				}
 			});
 		});
 	}
 
 	postData(form);
+
+	function showThxModal (message) {
+		const modal = document.querySelector('.modal');
+		modal.classList.toggle('show');
+
+        modal.innerHTML = `
+            <div class="modal__content">
+                <div class="modal__title">${message}</div>
+            </div>
+        `;
+
+		setTimeout(() => {
+			modal.classList.toggle('show');
+		}, 2000);
+	}
 });
