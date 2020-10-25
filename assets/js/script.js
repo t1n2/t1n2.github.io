@@ -79,7 +79,11 @@ window.addEventListener('DOMContentLoaded', () => {
 				},
 				body: JSON.stringify(object)
 			})
-			.then(data => data.text())
+			.then(function (data) {
+				if (!data.ok) {
+					throw new Error(data.status);
+				} else return data.text();
+			})
 			.then(data => {
 				console.log(data);
 				showThxModal(message.success);
