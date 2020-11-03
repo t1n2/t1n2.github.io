@@ -787,16 +787,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Contact */
 
-.contact {
-	position: relative;
-	text-align: center;
-}
-
 .contact__form {
+	position: relative;
 	display: flex;
 	justify-content: space-between;
     margin-bottom: 55px;
-    
+	text-align: center;
 }
 
 .left__col {
