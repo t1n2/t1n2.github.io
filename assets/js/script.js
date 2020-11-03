@@ -51,7 +51,7 @@ window.addEventListener('DOMContentLoaded', () => {
         failure: 'Something went wrong...'
 	};
 
-	function postData(form) {
+	function postData(form, animationPosition) {
 		form.addEventListener('submit', (e) => {
 			e.preventDefault();
 
@@ -62,7 +62,7 @@ window.addEventListener('DOMContentLoaded', () => {
 				margin: 0 auto;
 			`;
 
-			form.insertAdjacentElement('afterbegin', statusMessage);
+			form.insertAdjacentElement(animationPosition, statusMessage);
 
 			
 			const formData = new FormData(form);
@@ -99,7 +99,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
-	postData(form);
+	postData(form, 'afterbegin');
 
 	function showThxModal (message) {
 		const modal = document.querySelector('.modal');
@@ -115,4 +115,10 @@ window.addEventListener('DOMContentLoaded', () => {
 			modal.classList.toggle('show');
 		}, 2000);
 	}
+
+	// Form Contact Us
+
+	const formContactUs = document.querySelector('.contact__form');
+
+	postData(formContactUs, 'beforeBegin');
 });
