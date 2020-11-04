@@ -1,3 +1,6 @@
+html {
+	scroll-behavior: smooth;
+	}
 
 body {
 	margin: 0;
@@ -25,6 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 	max-width: 1130px;
 	padding: 0 15px;
 	margin: 0 auto;
+	scroll-behavior: smooth;
 }
 
 
